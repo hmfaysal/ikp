@@ -1,224 +1,852 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Md. Imtiaz Kabir Prottuy</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@600;800&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg: #0b0f14;
-      --card: #121826;
-      --text: #e5e7eb;
-      --muted: #9ca3af;
-      --accent: #fbbf24;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imtiaz Kabir Prottuy - IR Grad | Researcher | Social Worker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,800;1,9..144,300&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    * { box-sizing: border-box; }
+        :root {
+            --warm-black: #1a1510;
+            --warm-cream: #faf7f2;
+            --burnt-orange: #d85a2c;
+            --deep-green: #2d5a3f;
+            --golden: #d4a574;
+            --soft-sage: #9dae99;
+            --text-primary: #2a2218;
+            --text-secondary: #6b5d52;
+        }
 
-    body {
-      margin: 0;
-      font-family: Inter, system-ui, -apple-system, sans-serif;
-      background: radial-gradient(1200px 600px at 10% -10%, #1f2937, transparent), var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--warm-cream);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
 
-    header {
-      min-height: 100vh;
-      display: grid;
-      place-items: center;
-      padding: 2rem;
-    }
+        /* Decorative background elements */
+        body::before {
+            content: '';
+            position: fixed;
+            top: -50%;
+            right: -20%;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(216, 90, 44, 0.08) 0%, transparent 70%);
+            border-radius: 50%;
+            z-index: -1;
+            animation: float 20s ease-in-out infinite;
+        }
 
-    .hero {
-      max-width: 1100px;
-      display: grid;
-      grid-template-columns: 1.2fr 1fr;
-      gap: 3rem;
-      align-items: center;
-    }
+        body::after {
+            content: '';
+            position: fixed;
+            bottom: -30%;
+            left: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(45, 90, 63, 0.06) 0%, transparent 70%);
+            border-radius: 50%;
+            z-index: -1;
+            animation: float 25s ease-in-out infinite reverse;
+        }
 
-    .hero img {
-      width: 100%;
-      border-radius: 1.5rem;
-      box-shadow: 0 40px 80px rgba(0,0,0,.5);
-    }
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(30px, -30px) scale(1.05); }
+        }
 
-    h1 {
-      font-family: "Playfair Display", serif;
-      font-size: clamp(2.5rem, 5vw, 4rem);
-      margin: 0 0 1rem;
-    }
+        /* Header */
+        header {
+            padding: 2rem 5%;
+            border-bottom: 1px solid rgba(42, 34, 24, 0.1);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            background: rgba(250, 247, 242, 0.9);
+            z-index: 100;
+            animation: slideDown 0.6s ease-out;
+        }
 
-    .tagline {
-      color: var(--accent);
-      font-weight: 600;
-      margin-bottom: 1rem;
-    }
+        @keyframes slideDown {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
 
-    .meta {
-      color: var(--muted);
-      font-size: .95rem;
-      margin-bottom: 2rem;
-    }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
 
-    .buttons a {
-      display: inline-block;
-      margin-right: 1rem;
-      margin-bottom: .5rem;
-      padding: .7rem 1.2rem;
-      border-radius: .75rem;
-      background: var(--accent);
-      color: #000;
-      text-decoration: none;
-      font-weight: 600;
-      transition: transform .2s ease, box-shadow .2s ease;
-    }
+        .logo {
+            font-family: 'Fraunces', serif;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--burnt-orange);
+            letter-spacing: -0.02em;
+        }
 
-    .buttons a.secondary {
-      background: transparent;
-      border: 1px solid var(--accent);
-      color: var(--accent);
-    }
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
 
-    .buttons a:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 30px rgba(251,191,36,.3);
-    }
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            position: relative;
+            transition: color 0.3s ease;
+        }
 
-    section {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 4rem 2rem;
-    }
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--burnt-orange);
+            transition: width 0.3s ease;
+        }
 
-    .card {
-      background: linear-gradient(180deg, #121826, #0e1422);
-      border-radius: 1.5rem;
-      padding: 2rem;
-      box-shadow: inset 0 1px 0 rgba(255,255,255,.04);
-    }
+        .nav-links a:hover {
+            color: var(--burnt-orange);
+        }
 
-    h2 {
-      font-family: "Playfair Display", serif;
-      font-size: 2rem;
-      margin-top: 0;
-    }
+        .nav-links a:hover::after {
+            width: 100%;
+        }
 
-    .grid {
-      display: grid;
-      gap: 2rem;
-    }
+        /* Hero Section */
+        .hero {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 5rem 5%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
 
-    .grid-3 { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
-    ul {
-      padding-left: 1.2rem;
-    }
+        .hero-content h1 {
+            font-family: 'Fraunces', serif;
+            font-size: 4rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            color: var(--warm-black);
+            letter-spacing: -0.03em;
+        }
 
-    footer {
-      text-align: center;
-      padding: 3rem 1rem;
-      color: var(--muted);
-      font-size: .9rem;
-    }
+        .hero-content h1 .highlight {
+            color: var(--burnt-orange);
+            font-style: italic;
+            position: relative;
+            display: inline-block;
+        }
 
-    @media (max-width: 900px) {
-      .hero { grid-template-columns: 1fr; }
-    }
-  </style>
+        .hero-tagline {
+            font-size: 1.3rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            font-weight: 400;
+        }
+
+        .hero-description {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+            margin-bottom: 2.5rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: var(--burnt-orange);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #b94920;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(216, 90, 44, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--deep-green);
+            border-color: var(--deep-green);
+        }
+
+        .btn-secondary:hover {
+            background: var(--deep-green);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .hero-image {
+            position: relative;
+            animation: fadeInUp 0.8s ease-out 0.4s both;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease;
+        }
+
+        .hero-image:hover img {
+            transform: scale(1.02);
+        }
+
+        .hero-image::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid var(--burnt-orange);
+            border-radius: 20px;
+            z-index: -1;
+        }
+
+        /* Stats Section */
+        .stats {
+            background: var(--deep-green);
+            color: white;
+            padding: 4rem 5%;
+            margin: 4rem 0;
+            animation: fadeInUp 0.8s ease-out 0.6s both;
+        }
+
+        .stats-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 3rem;
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-family: 'Fraunces', serif;
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            color: var(--golden);
+        }
+
+        .stat-item p {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        /* Experience Section */
+        .experience {
+            max-width: 1400px;
+            margin: 6rem auto;
+            padding: 0 5%;
+            animation: fadeInUp 0.8s ease-out 0.8s both;
+        }
+
+        .section-title {
+            font-family: 'Fraunces', serif;
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 3rem;
+            color: var(--warm-black);
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60%;
+            height: 4px;
+            background: var(--burnt-orange);
+            border-radius: 2px;
+        }
+
+        .experience-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .experience-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid rgba(42, 34, 24, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .experience-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--burnt-orange);
+            transform: scaleY(0);
+            transition: transform 0.3s ease;
+            transform-origin: top;
+        }
+
+        .experience-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .experience-card:hover::before {
+            transform: scaleY(1);
+        }
+
+        .experience-card h3 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--warm-black);
+            margin-bottom: 0.5rem;
+        }
+
+        .experience-card .company {
+            color: var(--burnt-orange);
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+        }
+
+        .experience-card .period {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .experience-card p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        /* Research Highlights */
+        .research {
+            background: linear-gradient(135deg, #2d5a3f 0%, #1f3d2c 100%);
+            color: white;
+            padding: 6rem 5%;
+            margin: 6rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .research::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="1" fill="white" opacity="0.1"/></svg>');
+            opacity: 0.3;
+        }
+
+        .research-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .research h2 {
+            font-family: 'Fraunces', serif;
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 2rem;
+        }
+
+        .research-list {
+            display: grid;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .research-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .research-item:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateX(10px);
+        }
+
+        .research-item h3 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--golden);
+        }
+
+        .research-item p {
+            opacity: 0.95;
+            line-height: 1.8;
+        }
+
+        /* Impact Section */
+        .impact {
+            max-width: 1400px;
+            margin: 6rem auto;
+            padding: 0 5%;
+        }
+
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .impact-card {
+            background: linear-gradient(135deg, var(--soft-sage) 0%, var(--deep-green) 100%);
+            color: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .impact-card:hover {
+            transform: scale(1.05);
+        }
+
+        .impact-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .impact-card h3 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--warm-black);
+            color: var(--warm-cream);
+            padding: 4rem 5% 2rem;
+            margin-top: 6rem;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 4rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-about h3 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--golden);
+            margin-bottom: 1rem;
+        }
+
+        .footer-about p {
+            opacity: 0.8;
+            line-height: 1.8;
+        }
+
+        .footer-links h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--golden);
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
+            color: var(--warm-cream);
+            text-decoration: none;
+            opacity: 0.8;
+            transition: all 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+            color: var(--golden);
+            padding-left: 5px;
+        }
+
+        .footer-bottom {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(250, 247, 242, 0.2);
+            text-align: center;
+            opacity: 0.7;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .hero {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .hero-content h1 {
+                font-size: 3rem;
+            }
+
+            .stats-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .experience-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .hero-image img {
+                height: 400px;
+            }
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--warm-cream);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--burnt-orange);
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #b94920;
+        }
+
+        /* Smooth scroll behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
 <body>
+    <header>
+        <nav>
+            <div class="logo">IKP</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#impact">Impact</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<header>
-  <div class="hero">
-    <div>
-      <div class="tagline">IR Grad • Researcher • Social Worker • Policy Analyst</div>
-      <h1>Md. Imtiaz Kabir Prottuy</h1>
-      <div class="meta">Bangladesh University of Professionals (BUP) · Dhaka, Bangladesh<br>2,100+ followers · 500+ connections</div>
-      <p>
-        Strategist & Sub-Editor at <strong>The Daily Campus</strong>. I work at the intersection of
-        public policy, research, media, and social impact — turning complex ideas into narratives
-        that matter.
-      </p>
-      <div class="buttons">
-        <a href="#about">About Me</a>
-        <a href="#work" class="secondary">What I Do</a>
-      </div>
-    </div>
-    <div>
-      <img src="IMG_9414.jpg" alt="Md. Imtiaz Kabir Prottuy at night under lights" />
-    </div>
-  </div>
-</header>
+    <section class="hero" id="about">
+        <div class="hero-content">
+            <h1>
+                Building a better <span class="highlight">Bangladesh</span> through policy, research & action
+            </h1>
+            <p class="hero-tagline">IR Graduate | Researcher | Social Worker | Policy Analyst</p>
+            <p class="hero-description">
+                Passionate about public policy, social development, and governance. From the Chittagong Hill Tracts to diplomatic corridors in Warsaw, I'm committed to creating inclusive and impactful change.
+            </p>
+            <div class="cta-buttons">
+                <a href="#contact" class="btn btn-primary">Let's Connect</a>
+                <a href="#research" class="btn btn-secondary">View Research</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="IMG_9414.jpg" alt="Md. Imtiaz Kabir Prottuy">
+        </div>
+    </section>
 
-<section id="about">
-  <div class="card">
-    <h2>About</h2>
-    <p>
-      I hold a Bachelor’s in International Relations from BUP (2024), graduating with a
-      <strong>perfect thesis score</strong> for my research on the <em>CHT Peace Accord</em>.
-      My work spans academic research, policy analysis, media strategy, and grassroots
-      humanitarian action.
-    </p>
-    <p>
-      From diplomatic exposure at the Embassy of Bangladesh in Warsaw to national-level
-      political economy research, I’ve consistently focused on governance, inclusion,
-      and real-world impact.
-    </p>
-  </div>
-</section>
+    <section class="stats">
+        <div class="stats-container">
+            <div class="stat-item">
+                <h3>2,101</h3>
+                <p>LinkedIn Followers</p>
+            </div>
+            <div class="stat-item">
+                <h3>500+</h3>
+                <p>Connections</p>
+            </div>
+            <div class="stat-item">
+                <h3>10+</h3>
+                <p>Years Social Service</p>
+            </div>
+            <div class="stat-item">
+                <h3>4.0</h3>
+                <p>Perfect Thesis Score</p>
+            </div>
+        </div>
+    </section>
 
-<section id="work">
-  <div class="grid grid-3">
-    <div class="card">
-      <h2>Research & Policy</h2>
-      <ul>
-        <li>Political economy & governance analysis</li>
-        <li>Qualitative research (KIIs, FGDs, fieldwork)</li>
-        <li>Academic & policy publications</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h2>Media & Strategy</h2>
-      <ul>
-        <li>Strategist & Sub-Editor (ENG)</li>
-        <li>Content development & editing</li>
-        <li>Pitch decks & presentations</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h2>Social Impact</h2>
-      <ul>
-        <li>Founder, Vision 360</li>
-        <li>Disaster response & humanitarian relief</li>
-        <li>Education & youth engagement</li>
-      </ul>
-    </div>
-  </div>
-</section>
+    <section class="experience" id="experience">
+        <h2 class="section-title">Professional Journey</h2>
+        <div class="experience-grid">
+            <div class="experience-card">
+                <h3>Chief Strategy Officer & Sub-Editor</h3>
+                <p class="company">The Daily Campus</p>
+                <p class="period">Apr 2025 - Present</p>
+                <p>Creating engaging content and supporting strategic initiatives at Bangladesh's leading online media platform.</p>
+            </div>
+            <div class="experience-card">
+                <h3>Research Assistant</h3>
+                <p class="company">People and Policy</p>
+                <p class="period">Jun 2024 - Mar 2025</p>
+                <p>Conducted policy analysis and public policy research, contributing to evidence-based governance solutions.</p>
+            </div>
+            <div class="experience-card">
+                <h3>Research Assistant</h3>
+                <p class="company">INFO POWER LIMITED</p>
+                <p class="period">Jun 2024 - Mar 2025</p>
+                <p>Collaborated with NGOs and MNCs on SDG-focused advocacy and CSR initiatives, managing projects and developing strategic content.</p>
+            </div>
+            <div class="experience-card">
+                <h3>Diplomatic Intern</h3>
+                <p class="company">Embassy of Bangladesh, Warsaw</p>
+                <p class="period">Mar 2024 - Jun 2024</p>
+                <p>Gained hands-on diplomatic experience working on international affairs projects that truly mattered.</p>
+            </div>
+            <div class="experience-card">
+                <h3>Vice President</h3>
+                <p class="company">BUP Global Affairs Council</p>
+                <p class="period">Aug 2023 - Mar 2025</p>
+                <p>Led international relations initiatives and organized BUPIMUN conferences, fostering global dialogue.</p>
+            </div>
+            <div class="experience-card">
+                <h3>Founder</h3>
+                <p class="company">VISION 360</p>
+                <p class="period">Jun 2015 - Present</p>
+                <p>Leading humanitarian efforts: COVID-19 relief, toy drives, flood rescue coordination, and community development.</p>
+            </div>
+        </div>
+    </section>
 
-<section>
-  <div class="card">
-    <h2>Fun Facts</h2>
-    <p>
-      • Interviewed traditional leaders & policymakers 🎤<br>
-      • Organized national & international conferences 🏛️<br>
-      • Believes policy should be readable, humane, and actionable ✍️
-    </p>
-  </div>
-</section>
+    <section class="research" id="research">
+        <div class="research-container">
+            <h2 class="section-title">Research Highlights</h2>
+            <div class="research-list">
+                <div class="research-item">
+                    <h3>Reflections on Peace: CHT Peace Accord Implementation</h3>
+                    <p>Graduated with a perfect thesis score for comprehensive research on the Chittagong Hill Tracts Peace Accord. Interviewed key figures including Chakma Circle Chief Raja Devasish Roy and CHT Regional Council Chairman Jyotirindra Bodhipriya Larma.</p>
+                </div>
+                <div class="research-item">
+                    <h3>When 'Peace' Is Gender-Blind</h3>
+                    <p>Published policy essay in WCAPS special issue marking 25th anniversary of UN Security Council Resolution 1325, analyzing liberal peacebuilding versus indigenous feminist peace in the CHT.</p>
+                </div>
+                <div class="research-item">
+                    <h3>Political Economy Analysis of Governance (GO4IMPact)</h3>
+                    <p>Research Associate on SDC-funded national assessment. Conducted 20+ KIIs, 10 FGDs across Naogaon & Shatkhira. Developed theoretical framework and drafted comprehensive report.</p>
+                </div>
+                <div class="research-item">
+                    <h3>The Cost of Politics in Bangladesh</h3>
+                    <p>Westminster Foundation for Democracy (WFD) study exploring political financing and participation barriers. Managed qualitative research and report development.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<footer>
-  © <span id="year"></span> Md. Imtiaz Kabir Prottuy · Built for Planarity DCA
-</footer>
+    <section class="impact" id="impact">
+        <h2 class="section-title">Social Impact</h2>
+        <div class="impact-grid">
+            <div class="impact-card">
+                <div class="impact-icon">🍽️</div>
+                <h3>Project Full Moon</h3>
+                <p>Distributed dinner to 800+ families across 13 slums during COVID-19 pandemic</p>
+            </div>
+            <div class="impact-card">
+                <div class="impact-icon">📚</div>
+                <h3>Education Access</h3>
+                <p>Organized book drives and educational support for underprivileged children in urban and hill tract areas</p>
+            </div>
+            <div class="impact-card">
+                <div class="impact-icon">🚨</div>
+                <h3>Disaster Relief</h3>
+                <p>Coordinated rescue teams and relief projects during floods and natural disasters</p>
+            </div>
+            <div class="impact-card">
+                <div class="impact-icon">🧸</div>
+                <h3>Toy Drives</h3>
+                <p>Brought joy to children through organized toy distribution campaigns</p>
+            </div>
+        </div>
+    </section>
 
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-about">
+                <h3>Md. Imtiaz Kabir Prottuy</h3>
+                <p>
+                    IR Graduate from Bangladesh University of Professionals (BUP). Based in Dhaka, Bangladesh. 
+                    Committed to building a more inclusive and impactful future through research, policy, and social action.
+                </p>
+            </div>
+            <div class="footer-links">
+                <h4>Connect</h4>
+                <ul>
+                    <li><a href="https://linkedin.com/in/imtiaz-kabir-prottuy" target="_blank">LinkedIn</a></li>
+                    <li><a href="mailto:imtiaz@example.com">Email</a></li>
+                    <li><a href="#" target="_blank">Twitter</a></li>
+                    <li><a href="#" target="_blank">ResearchGate</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Organizations</h4>
+                <ul>
+                    <li><a href="#">VISION 360</a></li>
+                    <li><a href="#">Alor Khoje</a></li>
+                    <li><a href="#">BUP Global Affairs Council</a></li>
+                    <li><a href="#">The Daily Campus</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Md. Imtiaz Kabir Prottuy. All rights reserved.</p>
+        </div>
+    </footer>
 
+    <script>
+        // Smooth scroll animation observer
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all cards and sections
+        document.querySelectorAll('.experience-card, .research-item, .impact-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.6s ease-out';
+            observer.observe(el);
+        });
+
+        // Add parallax effect to hero image
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const heroImage = document.querySelector('.hero-image img');
+            if (heroImage) {
+                heroImage.style.transform = `translateY(${scrolled * 0.1}px)`;
+            }
+        });
+    </script>
 </body>
 </html>
