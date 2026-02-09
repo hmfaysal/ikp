@@ -3,10 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Imtiaz Kabir Prottuy - IR Grad | Researcher | Social Worker</title>
+
+    <!-- ===== Primary SEO Meta Tags ===== -->
+    <title>Imtiaz Kabir Prottuy | International Relations | Public Policy Researcher | Social Impact Leader Bangladesh</title>
+    <meta name="description" content="Md. Imtiaz Kabir Prottuy – IR graduate from BUP, public policy researcher, peacebuilding analyst, and social worker dedicated to inclusive governance, Chittagong Hill Tracts peace process, and community development in Bangladesh.">
+    <meta name="keywords" content="Imtiaz Kabir Prottuy, public policy Bangladesh, CHT Peace Accord, peacebuilding research, social worker Bangladesh, IR graduate BUP, policy analyst Dhaka, governance reform, social impact Bangladesh">
+
+    <!-- Canonical URL (update to your real domain when hosting) -->
+    <link rel="canonical" href="https://prottuy.com/" />
+
+    <!-- Open Graph (Facebook, LinkedIn, WhatsApp, etc.) -->
+    <meta property="og:title" content="Imtiaz Kabir Prottuy – Public Policy Researcher | Peacebuilding | Social Impact">
+    <meta property="og:description" content="Committed to evidence-based policy, inclusive governance, peace processes in CHT, and grassroots social change in Bangladesh.">
+    <meta property="og:image" content="https://prottuy.com/prottuy-hero.jpg>
+    <meta property="og:image:alt" content="Md. Imtiaz Kabir Prottuy – policy researcher and social worker">
+    <meta property="og:url" content="https://prottuy.com/">
+    <meta property="og:type" content="profile">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter / X Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Imtiaz Kabir Prottuy | Public Policy • Peacebuilding • Social Impact">
+    <meta name="twitter:description" content="Researcher & social worker focused on inclusive governance, CHT peace process and community development in Bangladesh.">
+    <meta name="twitter:image" content="https://prottuy.com/prottuy-hero.jpg>
+    <meta name="twitter:image:alt" content="Imtiaz Kabir Prottuy professional portrait">
+
+    <!-- Favicon & touch icons (replace with your actual files) -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,800;1,9..144,300&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
     <style>
         * {
             margin: 0;
@@ -33,7 +63,6 @@
             overflow-x: hidden;
         }
 
-        /* Decorative background elements */
         body::before {
             content: '';
             position: fixed;
@@ -65,7 +94,6 @@
             50% { transform: translate(30px, -30px) scale(1.05); }
         }
 
-        /* Header */
         header {
             padding: 2rem 5%;
             border-bottom: 1px solid rgba(42, 34, 24, 0.1);
@@ -78,14 +106,8 @@
         }
 
         @keyframes slideDown {
-            from {
-                transform: translateY(-100%);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
+            from { transform: translateY(-100%); opacity: 0; }
+            to   { transform: translateY(0); opacity: 1; }
         }
 
         nav {
@@ -138,7 +160,6 @@
             width: 100%;
         }
 
-        /* Hero Section */
         .hero {
             max-width: 1400px;
             margin: 0 auto;
@@ -151,14 +172,8 @@
         }
 
         @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(30px); }
+            to   { opacity: 1; transform: translateY(0); }
         }
 
         .hero-content h1 {
@@ -261,7 +276,6 @@
             z-index: -1;
         }
 
-        /* Stats Section */
         .stats {
             background: var(--deep-green);
             color: white;
@@ -292,7 +306,6 @@
             opacity: 0.9;
         }
 
-        /* Experience Section */
         .experience {
             max-width: 1400px;
             margin: 6rem auto;
@@ -385,7 +398,6 @@
             line-height: 1.7;
         }
 
-        /* Research Highlights */
         .research {
             background: linear-gradient(135deg, #2d5a3f 0%, #1f3d2c 100%);
             color: white;
@@ -453,7 +465,6 @@
             line-height: 1.8;
         }
 
-        /* Impact Section */
         .impact {
             max-width: 1400px;
             margin: 6rem auto;
@@ -492,7 +503,6 @@
             margin-bottom: 1rem;
         }
 
-        /* Footer */
         footer {
             background: var(--warm-black);
             color: var(--warm-cream);
@@ -560,229 +570,204 @@
             opacity: 0.7;
         }
 
-        /* Responsive Design */
+        /* Responsive */
         @media (max-width: 1024px) {
-            .hero {
-                grid-template-columns: 1fr;
-                gap: 3rem;
-            }
-
-            .hero-content h1 {
-                font-size: 3rem;
-            }
-
-            .stats-container {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .footer-content {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
+            .hero { grid-template-columns: 1fr; gap: 3rem; }
+            .hero-content h1 { font-size: 3rem; }
+            .stats-container { grid-template-columns: repeat(2, 1fr); }
+            .footer-content { grid-template-columns: 1fr; gap: 2rem; }
         }
 
         @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-
-            .hero-content h1 {
-                font-size: 2.5rem;
-            }
-
-            .section-title {
-                font-size: 2rem;
-            }
-
-            .experience-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .stats-container {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .cta-buttons {
-                flex-direction: column;
-            }
-
-            .hero-image img {
-                height: 400px;
-            }
+            .nav-links { display: none; }
+            .hero-content h1 { font-size: 2.5rem; }
+            .section-title { font-size: 2rem; }
+            .experience-grid { grid-template-columns: 1fr; }
+            .stats-container { grid-template-columns: 1fr; gap: 2rem; }
+            .cta-buttons { flex-direction: column; }
+            .hero-image img { height: 400px; }
         }
 
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar {
-            width: 10px;
-        }
+        /* Scrollbar */
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: var(--warm-cream); }
+        ::-webkit-scrollbar-thumb { background: var(--burnt-orange); border-radius: 5px; }
+        ::-webkit-scrollbar-thumb:hover { background: #b94920; }
 
-        ::-webkit-scrollbar-track {
-            background: var(--warm-cream);
-        }
+        html { scroll-behavior: smooth; }
 
-        ::-webkit-scrollbar-thumb {
-            background: var(--burnt-orange);
-            border-radius: 5px;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: #b94920;
-        }
-
-        /* Smooth scroll behavior */
-        html {
-            scroll-behavior: smooth;
+        /* Visually hidden for screen readers */
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0,0,0,0);
+            border: 0;
         }
     </style>
 </head>
 <body>
+
     <header>
-        <nav>
+        <nav aria-label="Main navigation">
             <div class="logo">IKP</div>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#research">Research</a></li>
-                <li><a href="#impact">Impact</a></li>
+                <li><a href="#impact">Social Impact</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="hero" id="about">
-        <div class="hero-content">
-            <h1>
-                Building a better <span class="highlight">Bangladesh</span> through policy, research & action
-            </h1>
-            <p class="hero-tagline">IR Graduate | Researcher | Social Worker | Policy Analyst</p>
-            <p class="hero-description">
-                Passionate about public policy, social development, and governance. From the Chittagong Hill Tracts to diplomatic corridors in Warsaw, I'm committed to creating inclusive and impactful change.
-            </p>
-            <div class="cta-buttons">
-                <a href="#contact" class="btn btn-primary">Let's Connect</a>
-                <a href="#research" class="btn btn-secondary">View Research</a>
-            </div>
-        </div>
-        <div class="hero-image">
-            <img src="IMG_9414.jpg" alt="Md. Imtiaz Kabir Prottuy">
-        </div>
-    </section>
-
-    <section class="stats">
-        <div class="stats-container">
-            <div class="stat-item">
-                <h3>2,101</h3>
-                <p>LinkedIn Followers</p>
-            </div>
-            <div class="stat-item">
-                <h3>500+</h3>
-                <p>Connections</p>
-            </div>
-            <div class="stat-item">
-                <h3>10+</h3>
-                <p>Years Social Service</p>
-            </div>
-            <div class="stat-item">
-                <h3>4.0</h3>
-                <p>Perfect Thesis Score</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="experience" id="experience">
-        <h2 class="section-title">Professional Journey</h2>
-        <div class="experience-grid">
-            <div class="experience-card">
-                <h3>Chief Strategy Officer & Sub-Editor</h3>
-                <p class="company">The Daily Campus</p>
-                <p class="period">Apr 2025 - Present</p>
-                <p>Creating engaging content and supporting strategic initiatives at Bangladesh's leading online media platform.</p>
-            </div>
-            <div class="experience-card">
-                <h3>Research Assistant</h3>
-                <p class="company">People and Policy</p>
-                <p class="period">Jun 2024 - Mar 2025</p>
-                <p>Conducted policy analysis and public policy research, contributing to evidence-based governance solutions.</p>
-            </div>
-            <div class="experience-card">
-                <h3>Research Assistant</h3>
-                <p class="company">INFO POWER LIMITED</p>
-                <p class="period">Jun 2024 - Mar 2025</p>
-                <p>Collaborated with NGOs and MNCs on SDG-focused advocacy and CSR initiatives, managing projects and developing strategic content.</p>
-            </div>
-            <div class="experience-card">
-                <h3>Diplomatic Intern</h3>
-                <p class="company">Embassy of Bangladesh, Warsaw</p>
-                <p class="period">Mar 2024 - Jun 2024</p>
-                <p>Gained hands-on diplomatic experience working on international affairs projects that truly mattered.</p>
-            </div>
-            <div class="experience-card">
-                <h3>Vice President</h3>
-                <p class="company">BUP Global Affairs Council</p>
-                <p class="period">Aug 2023 - Mar 2025</p>
-                <p>Led international relations initiatives and organized BUPIMUN conferences, fostering global dialogue.</p>
-            </div>
-            <div class="experience-card">
-                <h3>Founder</h3>
-                <p class="company">VISION 360</p>
-                <p class="period">Jun 2015 - Present</p>
-                <p>Leading humanitarian efforts: COVID-19 relief, toy drives, flood rescue coordination, and community development.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="research" id="research">
-        <div class="research-container">
-            <h2 class="section-title">Research Highlights</h2>
-            <div class="research-list">
-                <div class="research-item">
-                    <h3>Reflections on Peace: CHT Peace Accord Implementation</h3>
-                    <p>Graduated with a perfect thesis score for comprehensive research on the Chittagong Hill Tracts Peace Accord. Interviewed key figures including Chakma Circle Chief Raja Devasish Roy and CHT Regional Council Chairman Jyotirindra Bodhipriya Larma.</p>
-                </div>
-                <div class="research-item">
-                    <h3>When 'Peace' Is Gender-Blind</h3>
-                    <p>Published policy essay in WCAPS special issue marking 25th anniversary of UN Security Council Resolution 1325, analyzing liberal peacebuilding versus indigenous feminist peace in the CHT.</p>
-                </div>
-                <div class="research-item">
-                    <h3>Political Economy Analysis of Governance (GO4IMPact)</h3>
-                    <p>Research Associate on SDC-funded national assessment. Conducted 20+ KIIs, 10 FGDs across Naogaon & Shatkhira. Developed theoretical framework and drafted comprehensive report.</p>
-                </div>
-                <div class="research-item">
-                    <h3>The Cost of Politics in Bangladesh</h3>
-                    <p>Westminster Foundation for Democracy (WFD) study exploring political financing and participation barriers. Managed qualitative research and report development.</p>
+    <main>
+        <section class="hero" id="about" aria-labelledby="hero-heading">
+            <div class="hero-content">
+                <h1 id="hero-heading">
+                    Building a better <span class="highlight">Bangladesh</span> through policy, research & action
+                </h1>
+                <p class="hero-tagline">International Relations Graduate | Public Policy Researcher | Social Development Leader</p>
+                <p class="hero-description">
+                    Passionate about inclusive governance, peacebuilding in the Chittagong Hill Tracts, evidence-based policy, and grassroots social change.
+                </p>
+                <div class="cta-buttons">
+                    <a href="#contact" class="btn btn-primary">Get in Touch</a>
+                    <a href="#research" class="btn btn-secondary">Explore Research</a>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <section class="impact" id="impact">
-        <h2 class="section-title">Social Impact</h2>
-        <div class="impact-grid">
-            <div class="impact-card">
-                <div class="impact-icon">🍽️</div>
-                <h3>Project Full Moon</h3>
-                <p>Distributed dinner to 800+ families across 13 slums during COVID-19 pandemic</p>
+            <div class="hero-image">
+                <img 
+                    src="IMG_9414.jpg" 
+                    alt="Md. Imtiaz Kabir Prottuy – public policy researcher, peacebuilding analyst and social worker from Bangladesh" 
+                    width="800" 
+                    height="600" 
+                    loading="eager"
+                >
             </div>
-            <div class="impact-card">
-                <div class="impact-icon">📚</div>
-                <h3>Education Access</h3>
-                <p>Organized book drives and educational support for underprivileged children in urban and hill tract areas</p>
-            </div>
-            <div class="impact-card">
-                <div class="impact-icon">🚨</div>
-                <h3>Disaster Relief</h3>
-                <p>Coordinated rescue teams and relief projects during floods and natural disasters</p>
-            </div>
-            <div class="impact-card">
-                <div class="impact-icon">🧸</div>
-                <h3>Toy Drives</h3>
-                <p>Brought joy to children through organized toy distribution campaigns</p>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <footer id="contact">
+        <section class="stats" aria-labelledby="stats-heading">
+            <h2 id="stats-heading" class="visually-hidden">Key Achievements & Reach</h2>
+            <div class="stats-container">
+                <div class="stat-item">
+                    <h3>2,101</h3>
+                    <p>LinkedIn Followers</p>
+                </div>
+                <div class="stat-item">
+                    <h3>500+</h3>
+                    <p>Professional Connections</p>
+                </div>
+                <div class="stat-item">
+                    <h3>10+</h3>
+                    <p>Years in Social Service</p>
+                </div>
+                <div class="stat-item">
+                    <h3>4.0</h3>
+                    <p>Perfect Thesis Score – CHT Peace Accord</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="experience" id="experience" aria-labelledby="experience-heading">
+            <h2 id="experience-heading" class="section-title">Professional Experience</h2>
+            <div class="experience-grid">
+                <div class="experience-card">
+                    <h3>Chief Strategy Officer & Sub-Editor</h3>
+                    <p class="company">The Daily Campus</p>
+                    <time class="period" datetime="2025-04">Apr 2025 – Present</time>
+                    <p>Creating engaging content and supporting strategic initiatives at Bangladesh's leading online media platform.</p>
+                </div>
+                <div class="experience-card">
+                    <h3>Research Assistant</h3>
+                    <p class="company">People and Policy</p>
+                    <time class="period" datetime="2024-06">Jun 2024 – Mar 2025</time>
+                    <p>Conducted policy analysis and public policy research, contributing to evidence-based governance solutions.</p>
+                </div>
+                <div class="experience-card">
+                    <h3>Research Assistant</h3>
+                    <p class="company">INFO POWER LIMITED</p>
+                    <time class="period" datetime="2024-06">Jun 2024 – Mar 2025</time>
+                    <p>Collaborated with NGOs and MNCs on SDG-focused advocacy and CSR initiatives, managing projects and developing strategic content.</p>
+                </div>
+                <div class="experience-card">
+                    <h3>Diplomatic Intern</h3>
+                    <p class="company">Embassy of Bangladesh, Warsaw</p>
+                    <time class="period" datetime="2024-03">Mar 2024 – Jun 2024</time>
+                    <p>Gained hands-on diplomatic experience working on international affairs projects that truly mattered.</p>
+                </div>
+                <div class="experience-card">
+                    <h3>Vice President</h3>
+                    <p class="company">BUP Global Affairs Council</p>
+                    <time class="period" datetime="2023-08">Aug 2023 – Mar 2025</time>
+                    <p>Led international relations initiatives and organized BUPIMUN conferences, fostering global dialogue.</p>
+                </div>
+                <div class="experience-card">
+                    <h3>Founder</h3>
+                    <p class="company">VISION 360</p>
+                    <time class="period" datetime="2015-06">Jun 2015 – Present</time>
+                    <p>Leading humanitarian efforts: COVID-19 relief, toy drives, flood rescue coordination, and community development.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="research" id="research" aria-labelledby="research-heading">
+            <div class="research-container">
+                <h2 id="research-heading" class="section-title">Research Highlights</h2>
+                <div class="research-list">
+                    <div class="research-item">
+                        <h3>Reflections on Peace: CHT Peace Accord Implementation</h3>
+                        <p>Graduated with a perfect thesis score for comprehensive research on the Chittagong Hill Tracts Peace Accord. Interviewed key figures including Chakma Circle Chief Raja Devasish Roy and CHT Regional Council Chairman Jyotirindra Bodhipriya Larma.</p>
+                    </div>
+                    <div class="research-item">
+                        <h3>When 'Peace' Is Gender-Blind</h3>
+                        <p>Published policy essay in WCAPS special issue marking 25th anniversary of UN Security Council Resolution 1325, analyzing liberal peacebuilding versus indigenous feminist peace in the CHT.</p>
+                    </div>
+                    <div class="research-item">
+                        <h3>Political Economy Analysis of Governance (GO4IMPact)</h3>
+                        <p>Research Associate on SDC-funded national assessment. Conducted 20+ KIIs, 10 FGDs across Naogaon & Shatkhira. Developed theoretical framework and drafted comprehensive report.</p>
+                    </div>
+                    <div class="research-item">
+                        <h3>The Cost of Politics in Bangladesh</h3>
+                        <p>Westminster Foundation for Democracy (WFD) study exploring political financing and participation barriers. Managed qualitative research and report development.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="impact" id="impact" aria-labelledby="impact-heading">
+            <h2 id="impact-heading" class="section-title">Social Impact</h2>
+            <div class="impact-grid">
+                <div class="impact-card">
+                    <div class="impact-icon">🍽️</div>
+                    <h3>Project Full Moon</h3>
+                    <p>Distributed dinner to 800+ families across 13 slums during COVID-19 pandemic</p>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-icon">📚</div>
+                    <h3>Education Access</h3>
+                    <p>Organized book drives and educational support for underprivileged children in urban and hill tract areas</p>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-icon">🚨</div>
+                    <h3>Disaster Relief</h3>
+                    <p>Coordinated rescue teams and relief projects during floods and natural disasters</p>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-icon">🧸</div>
+                    <h3>Toy Drives</h3>
+                    <p>Brought joy to children through organized toy distribution campaigns</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact" aria-labelledby="contact-heading">
+        <h2 id="contact-heading" class="visually-hidden">Contact Md. Imtiaz Kabir Prottuy</h2>
         <div class="footer-content">
             <div class="footer-about">
                 <h3>Md. Imtiaz Kabir Prottuy</h3>
@@ -794,26 +779,62 @@
             <div class="footer-links">
                 <h4>Connect</h4>
                 <ul>
-                    <li><a href="https://linkedin.com/in/imtiaz-kabir-prottuy" target="_blank">LinkedIn</a></li>
+                    <li><a href="https://linkedin.com/in/imtiaz-kabir-prottuy" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
                     <li><a href="mailto:gmail@prottuy.com">Email</a></li>
-                    <li><a href="#" target="_blank">Twitter</a></li>
-                    <li><a href="#" target="_blank">ResearchGate</a></li>
+                    <li><a href="#" target="_blank" rel="noopener noreferrer">Twitter</a></li>
+                    <li><a href="#" target="_blank" rel="noopener noreferrer">ResearchGate</a></li>
                 </ul>
             </div>
             <div class="footer-links">
                 <h4>Organizations</h4>
                 <ul>
-                    <li><a href="#">VISION 360</a></li>
-                    <li><a href="#">Alor Khoje</a></li>
-                    <li><a href="https://bup.edu.bd/club-home/bup-global-affairs-council">BUP Global Affairs Council</a></li>
-                    <li><a href="https://english.thedailycampus.com/author/Md.%20Imtiaz%20Kabir%20Prottuy">The Daily Campus</a></li>
+                    <li><a href="#" target="_blank" rel="noopener noreferrer">VISION 360</a></li>
+                    <li><a href="#" target="_blank" rel="noopener noreferrer">Alor Khoje</a></li>
+                    <li><a href="https://bup.edu.bd/club-home/bup-global-affairs-council" target="_blank" rel="noopener noreferrer">BUP Global Affairs Council</a></li>
+                    <li><a href="https://english.thedailycampus.com/author/Md.%20Imtiaz%20Kabir%20Prottuy" target="_blank" rel="noopener noreferrer">The Daily Campus</a></li>
                 </ul>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 Md. Imtiaz Kabir Prottuy. All rights reserved.</p>
+            <p>© 2026 Md. Imtiaz Kabir Prottuy. All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- Structured Data (JSON-LD) – helps Google understand who you are -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Md. Imtiaz Kabir Prottuy",
+      "alternateName": "Imtiaz Kabir Prottuy",
+      "jobTitle": "Public Policy Researcher | Social Development Leader | International Relations Graduate",
+      "description": "Researcher and social worker focused on public policy, peacebuilding in Chittagong Hill Tracts, governance reform, and community development in Bangladesh.",
+      "url": "https://prottuy.com",
+      "sameAs": [
+        "https://linkedin.com/in/imtiaz-kabir-prottuy",
+        "https://twitter.com/yourhandle",
+        "https://researchgate.net/profile/Imtiaz-Kabir-Prottuy"
+      ],
+      "image": "https://prottuy.com/prottuy-hero.jpg,
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Dhaka",
+        "addressCountry": "BD"
+      },
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "Bangladesh University of Professionals"
+      },
+      "knowsAbout": [
+        "Public Policy",
+        "Peacebuilding",
+        "Chittagong Hill Tracts",
+        "Sustainable Development Goals",
+        "Governance Reform",
+        "Social Impact Projects"
+      ]
+    }
+    </script>
 
     <script>
         // Smooth scroll animation observer
@@ -831,7 +852,6 @@
             });
         }, observerOptions);
 
-        // Observe all cards and sections
         document.querySelectorAll('.experience-card, .research-item, .impact-card').forEach(el => {
             el.style.opacity = '0';
             el.style.transform = 'translateY(30px)';
@@ -839,7 +859,7 @@
             observer.observe(el);
         });
 
-        // Add parallax effect to hero image
+        // Parallax effect on hero image
         window.addEventListener('scroll', () => {
             const scrolled = window.pageYOffset;
             const heroImage = document.querySelector('.hero-image img');
@@ -848,5 +868,6 @@
             }
         });
     </script>
+
 </body>
 </html>
